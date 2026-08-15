@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyberbullying | Ana Carolina</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --rosa: #e91e63;
+    --rosa-claro: #fce4ec;
+    --rosa-medio: #f48fb1;
+    --rosa-escuro: #ad1457;
+    --rosa-suave: #fff5f8;
+    --escuro: #351525;
+    --texto: #4a3540;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--branco);
+    line-height: 1.6;
+}
+
+/* MENU */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(173, 20, 87, 0.97);
+    box-shadow: 0 3px 15px rgba(173, 20, 87, .3);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffc1d6;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+nav a:hover {
+    color: #ffc1d6;
+}
+
+/* INÍCIO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(173, 20, 87, .95),
+            rgba(233, 30, 99, .82)
+        ),
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    color: white;
+}
+
+.hero-content {
+    width: min(1150px, 90%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ffd0df;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.editora {
+    color: #ffd0df;
+    font-weight: bold;
+    font-size: 1rem !important;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--rosa-escuro);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero-card {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 25px;
+    padding: 35px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-card .icon {
+    font-size: 4rem;
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--escuro);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+}
+
+.highlight {
+    color: var(--rosa);
+}
+
+/* SOBRE */
+.about {
+    background: var(--rosa-suave);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(173,20,87,.2);
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: var(--rosa-escuro);
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(173,20,87,.08);
+    border: 1px solid #f8dce6;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(173,20,87,.15);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--rosa-escuro);
+}
+
+.types {
+    background: #fffafb;
+}
+
+.type-card {
+    border-top: 5px solid var(--rosa);
+}
+
+/* CONSEQUÊNCIAS */
+.consequences {
+    background: #351525;
+    color: white;
+}
+
+.consequences .section-title h2 {
+    color: white;
+}
+
+.consequences .section-title p {
+    color: #f5ccd9;
+}
+
+.consequence-card {
+    background: #4a2035;
+    border: 1px solid #6b304c;
+    color: white;
+}
+
+.consequence-card h3 {
+    color: #ffb6cd;
+}
+
+/* SOLUÇÕES */
+.solutions {
+    background: linear-gradient(135deg, #fff0f5, #fce4ec);
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(173,20,87,.08);
+}
+
+.number {
+    min-width: 48px;
+    height: 48px;
+    background: var(--rosa);
+    color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+/* VÍDEO */
+.video-section {
+    background: var(--rosa-suave);
+}
+
+.video {
+    max-width: 900px;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(173,20,87,.2);
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* LEIS */
+.laws {
+    background: white;
+}
+
+.law {
+    padding: 30px;
+    border-left: 6px solid var(--rosa);
+    background: var(--rosa-suave);
+    margin-bottom: 25px;
+    border-radius: 0 15px 15px 0;
+}
+
+.law h3 {
+    color: var(--rosa-escuro);
+    margin-bottom: 10px;
+}
+
+.law strong {
+    color: #c2185b;
+}
+
+.law a {
+    color: var(--rosa-escuro);
+    font-weight: bold;
+}
+
+/* DENÚNCIA */
+.report {
+    background: linear-gradient(135deg, #ad1457, #e91e63);
+    color: white;
+}
+
+.report .section-title h2 {
+    color: white;
+}
+
+.report .section-title p {
+    color: #ffe1eb;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.report-card {
+    background: rgba(255,255,255,.13);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.report-card h3 {
+    margin-bottom: 10px;
+}
+
+.report-card a {
+    color: white;
+    font-weight: bold;
+}
+
+/* FRASE */
+.quote {
+    text-align: center;
+    background: white;
+}
+
+.quote blockquote {
+    max-width: 900px;
+    margin: auto;
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    font-weight: bold;
+    color: var(--rosa-escuro);
+}
+
+.quote span {
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #777;
+    font-weight: normal;
+}
+
+/* RODAPÉ */
+footer {
+    background: #351525;
+    color: #e8bdcd;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+footer h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer .editora-footer {
+    color: #ffb6cd;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+footer a {
+    color: #ffb6cd;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .hero-content,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards,
+    .report-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-card {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 60px 18px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .cards,
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<header>
+<nav>
+
+    <div class="logo">
+        Cyber<span>Consciente</span>
+    </div>
+
+    <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">O que é?</a></li>
+        <li><a href="#consequencias">Consequências</a></li>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#leis">Leis</a></li>
+        <li><a href="#denuncia">Denuncie</a></li>
+    </ul>
+
+</nav>
+</header>
+
+<!-- INÍCIO -->
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+    <div>
+
+        <p class="editora">
+            EDITORA: ANA CAROLINA
+        </p>
+
+        <p style="font-weight:bold; letter-spacing:2px;">
+            CONSCIENTIZAÇÃO • PREVENÇÃO • RESPEITO
+        </p>
+
+        <h1>
+            Diga não ao
+            <span>Cyberbullying.</span>
+        </h1>
+
+        <p>
+            A internet deve ser um espaço de conhecimento,
+            diversão e conexão — não de humilhação,
+            ameaças ou perseguição.
+        </p>
+
+        <a href="#sobre" class="btn btn-primary">
+            Entenda o problema
+        </a>
+
+        <a href="#denuncia" class="btn btn-secondary">
+            Saiba como denunciar
+        </a>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="icon">🌸</div>
+
+        <h2>
+            Internet segura começa com respeito.
+        </h2>
+
+        <p>
+            Antes de compartilhar, comentar ou publicar,
+            pense no impacto que suas palavras podem causar
+            em outra pessoa.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+<section class="about" id="sobre">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+O que é <span class="highlight">Cyberbullying?</span>
+</h2>
+
+<p>
+Entenda como o bullying pode acontecer
+através da tecnologia e das redes sociais.
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<img
+src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1000&q=85"
+alt="Pessoa utilizando celular">
+
+<div class="about-text">
+
+<h3>
+Bullying também pode acontecer no mundo digital.
+</h3>
+
+<p>
+Cyberbullying é a prática de intimidar,
+humilhar, ameaçar ou perseguir alguém utilizando
+tecnologias digitais.
+</p>
+
+<p>
+Ele pode acontecer em redes sociais,
+aplicativos de mensagens, plataformas de jogos,
+fóruns e outros ambientes digitais.
+</p>
+
+<p>
+Exemplos incluem espalhar boatos,
+publicar fotos constrangedoras, enviar mensagens
+ofensivas, criar perfis falsos e ameaçar uma pessoa.
+</p>
+
+<p>
+O cyberbullying pode alcançar muitas pessoas
+e deixar registros digitais.
+</p>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- TIPOS -->
+<section class="types">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Como o Cyberbullying acontece?
+</h2>
+
+<p>
+Algumas das formas mais comuns de violência digital.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card type-card">
+<div class="card-icon">📱</div>
+<h3>Mensagens ofensivas</h3>
+<p>
+Insultos, ameaças, provocações ou mensagens
+destinadas a humilhar alguém.
+</p>
+</div>
+
+<div class="card type-card">
+<div class="card-icon">📸</div>
+<h3>Exposição</h3>
+<p>
+Compartilhamento de fotos, vídeos ou informações
+pessoais para constranger alguém.
+</p>
+</div>
+
+<div class="card type-card">
+<div class="card-icon">🎭</div>
+<h3>Perfil falso</h3>
+<p>
+Criação de contas falsas para se passar por outra
+pessoa e publicar conteúdos ofensivos.
+</p>
+</div>
+
+<div class="card type-card">
+<div class="card-icon">🚫</div>
+<h3>Exclusão</h3>
+<p>
+Organizar grupos para excluir ou isolar
+determinada pessoa.
+</p>
+</div>
+
+<div class="card type-card">
+<div class="card-icon">🗣️</div>
+<h3>Boatos</h3>
+<p>
+Criar ou espalhar informações falsas para
+prejudicar alguém.
+</p>
+</div>
+
+<div class="card type-card">
+<div class="card-icon">🎮</div>
+<h3>Jogos online</h3>
+<p>
+Insultos, ameaças e humilhações durante partidas
+ou comunidades de jogos.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONSEQUÊNCIAS -->
+<section class="consequences" id="consequencias">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Quais são as consequências?
+</h2>
+
+<p>
+O cyberbullying pode afetar a vítima emocional,
+social e fisicamente.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card consequence-card">
+<div class="card-icon">🧠</div>
+<h3>Saúde mental</h3>
+<p>
+Pode provocar ansiedade, tristeza,
+insegurança e estresse.
+</p>
+</div>
+
+<div class="card consequence-card">
+<div class="card-icon">😔</div>
+<h3>Autoestima</h3>
+<p>
+A vítima pode perder confiança em si mesma.
+</p>
+</div>
+
+<div class="card consequence-card">
+<div class="card-icon">🏫</div>
+<h3>Vida escolar</h3>
+<p>
+Pode prejudicar a concentração,
+a convivência e a frequência escolar.
+</p>
+</div>
+
+<div class="card consequence-card">
+<div class="card-icon">💤</div>
+<h3>Bem-estar</h3>
+<p>
+Pode estar associado a problemas de sono
+e outros sintomas físicos.
+</p>
+</div>
+
+<div class="card consequence-card">
+<div class="card-icon">👥</div>
+<h3>Isolamento</h3>
+<p>
+A pessoa pode evitar amigos e ambientes sociais.
+</p>
+</div>
+
+<div class="card consequence-card">
+<div class="card-icon">⚠️</div>
+<h3>Casos graves</h3>
+<p>
+Situações graves exigem apoio e busca de ajuda.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SOLUÇÕES -->
+<section class="solutions" id="solucoes">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+O que fazer?
+</h2>
+
+<p>
+Se você estiver passando por isso,
+não precisa enfrentar a situação sozinho.
+</p>
+
+</div>
+
+<div class="step">
+<div class="number">1</div>
+<div>
+<h3>Não responda às provocações</h3>
+<p>
+Evite discussões que possam aumentar o conflito.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<div>
+<h3>Guarde as provas</h3>
+<p>
+Faça capturas de tela de mensagens,
+publicações, perfis, datas e horários.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<div>
+<h3>Bloqueie o agressor</h3>
+<p>
+Utilize as ferramentas de bloqueio
+disponíveis na plataforma.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<div>
+<h3>Denuncie o conteúdo</h3>
+<p>
+Use a ferramenta de denúncia da rede social
+ou aplicativo.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="number">5</div>
+<div>
+<h3>Converse com alguém de confiança</h3>
+<p>
+Procure familiares, professores ou responsáveis.
+</p>
+</div>
+</div>
+
+<div class="step">
+<div class="number">6</div>
+<div>
+<h3>Procure ajuda</h3>
+<p>
+Em situações graves, procure orientação
+profissional ou autoridades competentes.
+</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- VÍDEO -->
+<section class="video-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+🎥 Vídeo sobre Cyberbullying
+</h2>
+
+<p>
+Material educativo do UNICEF Brasil.
+</p>
+
+</div>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/lwgQM7_ESH4"
+title="Vídeo sobre bullying - UNICEF Brasil"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+</section>
+
+<!-- LEIS -->
+<section class="laws" id="leis">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+⚖️ Leis e punições no Brasil
+</h2>
+
+<p>
+O cyberbullying pode gerar consequências
+legais dependendo do caso.
+</p>
+
+</div>
+
+<div class="law">
+
+<h3>
+Lei nº 14.811/2024
+</h3>
+
+<p>
+A Lei nº 14.811/2024 incluiu no Código Penal
+a intimidação sistemática e a intimidação
+sistemática virtual, conhecida como cyberbullying.
+</p>
+
+<br>
+
+<p>
+No caso de cyberbullying, a previsão legal é de
+<strong>reclusão de 2 a 4 anos e multa</strong>,
+quando a conduta não constituir crime mais grave.
+</p>
+
+<br>
+
+<a
+href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm"
+target="_blank">
+Consultar Lei nº 14.811/2024 →
+</a>
+
+</div>
+
+<div class="law">
+
+<h3>
+Lei nº 15.211/2025 — ECA Digital
+</h3>
+
+<p>
+O Estatuto Digital da Criança e do Adolescente
+estabelece regras para aumentar a proteção de
+crianças e adolescentes no ambiente digital.
+</p>
+
+<br>
+
+<p>
+A legislação prevê medidas relacionadas à
+prevenção e proteção contra diferentes riscos
+digitais, incluindo violência e cyberbullying.
+</p>
+
+<br>
+
+<a
+href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm"
+target="_blank">
+Consultar Lei nº 15.211/2025 →
+</a>
+
+</div>
+
+<div class="law">
+
+<h3>
+Punições
+</h3>
+
+<p>
+Dependendo do caso, o responsável pelo
+cyberbullying pode responder criminalmente
+e também estar sujeito a outras consequências
+previstas na legislação.
+</p>
+
+<br>
+
+<p>
+A punição concreta depende dos fatos,
+da idade dos envolvidos e da análise
+das autoridades competentes.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<!-- DENÚNCIA -->
+<section class="report" id="denuncia">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+🚨 Onde procurar ajuda?
+</h2>
+
+<p>
+Não fique em silêncio diante de uma situação
+de cyberbullying.
+</p>
+
+</div>
+
+<div class="report-grid">
+
+<div class="report-card">
+<div class="card-icon">📱</div>
+<h3>Rede social</h3>
+<p>
+Denuncie o conteúdo e bloqueie o perfil
+responsável.
+</p>
+</div>
+
+<div class="report-card">
+<div class="card-icon">🏫</div>
+<h3>Escola</h3>
+<p>
+Procure professores, coordenação ou direção.
+</p>
+</div>
+
+<div class="report-card">
+<div class="card-icon">👨‍👩‍👧</div>
+<h3>Família</h3>
+<p>
+Converse com seus pais, responsáveis ou
+outro adulto de confiança.
+</p>
+</div>
+
+<div class="report-card">
+<div class="card-icon">⚖️</div>
+<h3>Autoridades</h3>
+<p>
+Em situações graves ou ameaças,
+procure as autoridades competentes.
+</p>
+</div>
+
+<div class="report-card">
+<div class="card-icon">🌸</div>
+<h3>UNICEF</h3>
+<p>
+Consulte informações educativas sobre
+segurança digital.
+</p>
+<br>
+<a
+href="https://www.unicef.org/brazil/cyberbullying-o-que-eh-e-como-para-lo"
+target="_blank">
+Saiba mais →
+</a>
+</div>
+
+<div class="report-card">
+<div class="card-icon">🔐</div>
+<h3>Proteja seus dados</h3>
+<p>
+Não compartilhe senhas, endereço,
+telefone ou informações pessoais.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PREVENÇÃO -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+🌷 Como prevenir?
+</h2>
+
+<p>
+Atitudes simples ajudam a construir
+uma internet melhor.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">💬</div>
+<h3>Pense antes de publicar</h3>
+<p>
+Suas palavras podem afetar outra pessoa.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🔒</div>
+<h3>Cuide da privacidade</h3>
+<p>
+Revise as configurações de privacidade
+das suas redes sociais.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🤝</div>
+<h3>Seja um aliado</h3>
+<p>
+Apoie quem estiver sofrendo cyberbullying.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🚫</div>
+<h3>Não compartilhe</h3>
+<p>
+Não ajude a espalhar conteúdos ofensivos.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🚨</div>
+<h3>Denuncie</h3>
+<p>
+Denuncie situações de violência digital.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">❤️</div>
+<h3>Tenha empatia</h3>
+<p>
+Por trás de cada perfil existe uma pessoa.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FRASE -->
+<section class="quote">
+
+<blockquote>
+“A internet que queremos construir começa
+com a maneira como tratamos uns aos outros.”
+<span>🌸 Projeto CyberConsciente — Ana Carolina</span>
+</blockquote>
+
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+
+<h3>🌸 CyberConsciente</h3>
+
+<p>
+Informação, respeito e segurança para
+uma internet melhor.
+</p>
+
+<p class="editora-footer">
+Editora: Ana Carolina
+</p>
+
+<p>
+Projeto educativo sobre prevenção e
+combate ao cyberbullying.
+</p>
+
+<p style="margin-top:20px;">
+Fontes:
+<a
+href="https://www.unicef.org/brazil/cyberbullying-o-que-eh-e-como-para-lo"
+target="_blank">
+UNICEF Brasil
+</a>
+•
+<a
+href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14811.htm"
+target="_blank">
+Lei nº 14.811/2024
+</a>
+•
+<a
+href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15211.htm"
+target="_blank">
+Lei nº 15.211/2025
+</a>
+</p>
+
+<p style="margin-top:20px; font-size:.85rem;">
+© 2026 CyberConsciente — Ana Carolina
+</p>
+
+</footer>
+
+</body>
+</html>
